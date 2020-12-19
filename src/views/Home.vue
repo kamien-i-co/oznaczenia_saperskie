@@ -22,6 +22,9 @@
         </l-popup>
       </l-marker>
     </l-map>
+     <b-modal id="modal-1" title="Oznaczenia Saperskie" visible ok-only centered>
+    <p class="my-4">Witaj na mapie oznaczeń saperskich</p>
+  </b-modal>
   </div>
 
 </template>
