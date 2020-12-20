@@ -16,9 +16,11 @@
         :url="url"
         :attribution="attribution"
       />
-      <l-marker v-bind:key="marker.name" v-for="marker in markers" :lat-lng="marker.latLng" :icon=icon >
+      <l-marker v-bind:key="marker.name" v-for="marker in markers" :lat-lng="marker.latLng" :icon=icons[marker.state] >
         <l-popup>
-            {{marker.name}}
+            <p>Adres: {{marker.name}}</p>
+            <p>Stan: <strong>{{state[marker.state]}}</strong> </p>
+            
         </l-popup>
       </l-marker>
     </l-map>
@@ -31,39 +33,9 @@
 
 <script>
 import { latLng } from "leaflet";
-import L from 'leaflet';
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
-
-const markers = [
-  {
-    name: 'Skolimowska 3',
-    latLng: latLng(52.21158,21.02177)
-  },
-  {
-    name: 'Willowa 6',
-    latLng: latLng(52.20749,21.02398)
-  },
-  {
-    name: 'Wawelska 60',
-    latLng: latLng(52.21651,20.98738)
-  },
-  {
-    name: 'Białobrzeska 39',
-    latLng: latLng(52.21705, 20.97651)
-  },
-  {
-    name: 'Hołowki 3',
-    latLng: latLng(52.20830, 21.04612)
-  },
-  {
-    name: 'Grójecka 41',
-    latLng: latLng(52.21706, 20.98273)
-  },
-  {
-    name: 'Litewska 16',
-    latLng: latLng(52.21701, 21.02028)
-  },
-]
+import { markers, state} from './data';
+import L from 'leaflet';
 
 export default {
   name: "Home",
@@ -89,12 +61,33 @@ export default {
       },
       showMap: true,
       markers,
-      icon: new L.Icon({
-          iconUrl: require('../assets/icon-unknown.svg'),
-          iconRetinaUrl: require('../assets/icon-unknown.svg'),
+      state,
+      icons: {
+        unknown: new L.Icon({
+          iconUrl: require('../../assets/icon-unknown.svg'),
+          iconRetinaUrl: require('../../assets/icon-unknown.svg'),
           iconSize: new L.Point(50, 60),
           className: 'leaflet-div-icon'
       }),
+      veryGood: new L.Icon({
+          iconUrl: require('../../assets/icon-veryGood.svg'),
+          iconRetinaUrl: require('../../assets/icon-veryGood.svg'),
+          iconSize: new L.Point(50, 60),
+          className: 'leaflet-div-icon'
+      }),
+    veryBad: new L.Icon({
+        iconUrl: require('../../assets/icon-veryBad.svg'),
+        iconRetinaUrl: require('../../assets/icon-veryBad.svg'),
+        iconSize: new L.Point(50, 60),
+        className: 'leaflet-div-icon'
+    }),
+    destroyed: new L.Icon({
+        iconUrl: require('../../assets/icon-destroyed.svg'),
+        iconRetinaUrl: require('../../assets/icon-destroyed.svg'),
+        iconSize: new L.Point(50, 60),
+        className: 'leaflet-div-icon'
+    })
+      }
     };
   },
   methods: {
