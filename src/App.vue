@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Mapa</router-link> |
-      <router-link to="/about">O projekcie</router-link>
+      <router-link to="/about">O projekcie</router-link> |
+      <a href="https://www.facebook.com/kamienicowarszawa" target="_blank">Kamień i Co?</a>
     </div>
     <router-view/>
   </div>
@@ -25,7 +26,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #c5249a;
     }
   }
 }

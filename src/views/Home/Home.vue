@@ -24,9 +24,18 @@
         </l-popup>
       </l-marker>
     </l-map>
-     <b-modal id="modal-1" title="Oznaczenia Saperskie" visible ok-only centered>
-    <p class="my-4">Witaj na mapie oznaczeń saperskich</p>
-  </b-modal>
+     <vue-modaltor :visible="open" @hide="hideModal">
+  <p class="m-5">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <b-button class="ml-5">Ok</b-button>
+</vue-modaltor>
+<button @click="open=true">modal-basic</button>
   </div>
 
 </template>
@@ -61,6 +70,7 @@ export default {
       },
       showMap: true,
       markers,
+      open: true,
       state,
       icons: {
         unknown: new L.Icon({
@@ -102,6 +112,9 @@ export default {
     },
     innerClick() {
       alert("Click!");
+    },
+    hideModal() {
+      this.open = false;
     }
   }
 };
@@ -113,6 +126,18 @@ export default {
      background: none;
      border: none;
      position: absolute;
+ }
+
+ .modal-vue-wrapper {
+   z-index: 10000 !important;
+ }
+
+ .modal-vue-overlay {
+   background-color: rgba(255,255,255, 0.7) !important;
+ }
+
+ .modal-vue-panel.modal-fade.modal-vue-show {
+   background-color: rgba(255, 255, 255, 1) !important;
  }
 
 </style>
