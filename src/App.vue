@@ -10,12 +10,19 @@
 </template>
 
 <style lang="scss">
+/* https://coolors.co/2b303a-92dce5-eee5e9-7c7c7c-d64933 */
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #7C7C7C;
+}
+
+body {
+  background: #2B303A; // linear-gradient(90deg, #FFF 60%, #ad1d37 40%);
+  height: 100%;
 }
 
 #nav {
@@ -23,10 +30,10 @@
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #7C7C7C;
 
     &.router-link-exact-active {
-      color: #c5249a;
+      color: #FFF;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
 
-<div style="height: 100vh; width: 100%">
+<div class="px-5" style="height: 100vh; width: 100%">
     <div style="height: 200px overflow: auto;">
     </div>
     <l-map
@@ -132,7 +132,7 @@ export default {
  }
 
  .modal-vue-overlay {
-   background-color: rgba(255,255,255, 0.7) !important;
+   background-color: rgba(124,124, 124 , 0.8) !important;
  }
 
  .modal-vue-panel.modal-fade.modal-vue-show {
