@@ -30,7 +30,7 @@
     {{content.popupP1}}
   </p>
 </vue-modaltor>
-<button @click="open=true">modal-basic</button>
+<!-- <button @click="open=true">modal-basic</button> -->
   </div>
 
 </template>
@@ -105,9 +105,6 @@ export default {
     },
     showLongText() {
       this.showParagraph = !this.showParagraph;
-    },
-    innerClick() {
-      alert("Click!");
     },
     hideModal() {
       this.open = false;
