@@ -1,5 +1,10 @@
 import { latLng } from 'leaflet';
 
+export const content = {
+    popupTitle: `Witaj na Mapie Oznaczeń Saperskich`,
+    popupP1: `Przygotowaliśmy ten projekt z myślą o ułatwieniu znalezienia oznaczeń w Warszawie. Projekt ten ma na celu...`
+}
+
 export const state = {
     'unknown': 'Niebezbepieczony',
     'veryGood': 'Zabezpieczony',

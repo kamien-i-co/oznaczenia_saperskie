@@ -25,15 +25,10 @@
       </l-marker>
     </l-map>
      <vue-modaltor :visible="open" @hide="hideModal">
+       <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2>
   <p class="m-5">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    {{content.popupP1}}
   </p>
-  <b-button class="ml-5">Ok</b-button>
 </vue-modaltor>
 <button @click="open=true">modal-basic</button>
   </div>
@@ -43,7 +38,7 @@
 <script>
 import { latLng } from "leaflet";
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
-import { markers, state} from './data';
+import { markers, state, content} from './data';
 import L from 'leaflet';
 
 export default {
@@ -58,6 +53,7 @@ export default {
     return {
       zoom: 14.5,
       center: latLng(52.20985, 21.00843),
+      content,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -115,8 +111,14 @@ export default {
     },
     hideModal() {
       this.open = false;
+      localStorage.closed = true;
     }
-  }
+  },
+  mounted() {
+    if (localStorage.closed) {
+      this.open = false;
+    }
+  },
 };
 </script>
 
@@ -138,6 +140,16 @@ export default {
 
  .modal-vue-panel.modal-fade.modal-vue-show {
    background-color: rgba(255, 255, 255, 1) !important;
+   width: 50% !important;
  }
+
+@media (max-width: 1024px) {
+  
+  .modal-vue-panel.modal-fade.modal-vue-show {
+    width: 80% !important;
+  }
+  
+}
+
 
 </style>
