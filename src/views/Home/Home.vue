@@ -1,6 +1,6 @@
 <template>
 
-<div class="px-5" style="height: 100vh; width: 100%">
+<div style="height: 90vh; width: 100%">
     <div style="height: 200px overflow: auto;">
     </div>
     <l-map
@@ -146,6 +146,10 @@ export default {
     width: 80% !important;
   }
   
+}
+
+.vue2leaflet-map {
+  height: 100% !important;
 }
 
 
