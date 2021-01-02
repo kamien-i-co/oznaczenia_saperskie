@@ -14,7 +14,7 @@ export const state = {
 export const markers = [
     {
       name: 'Skolimowska 3',
-      latLng: latLng(52.21158,21.02177),
+      latLng: latLng(52.21164, 21.02177),
       state: 'unknown',
     },
     {
@@ -24,12 +24,12 @@ export const markers = [
     },
     {
       name: 'Wawelska 60',  // zabezpieczony
-      latLng: latLng(52.21651,20.98738),
+      latLng: latLng(52.21656, 20.98707),
       state: 'veryGood',
     },
     {
       name: 'Białobrzeska 39', // zabezpieczony
-      latLng: latLng(52.21705, 20.97651),
+      latLng: latLng(52.21711, 20.97658),
       state: 'veryGood',
     },
     {
@@ -39,12 +39,12 @@ export const markers = [
     },
     {
       name: 'Grójecka 41', // zabezpieczony
-      latLng: latLng(52.21706, 20.98273),
+      latLng: latLng(52.21710, 20.98230),
       state: 'veryGood',
     },
     {
       name: 'Litewska 16', // zabezpieczony
-      latLng: latLng(52.21701, 21.02028),
+      latLng: latLng(52.21709, 21.02027),
       state: 'veryGood',
     },
     {//
@@ -59,7 +59,7 @@ export const markers = [
     },
     {
     name: 'Klonowa 12',
-    latLng: latLng(52.21243, 21.02400),
+    latLng: latLng(52.21240, 21.02359),
     state: 'destroyed'
     },
     {
