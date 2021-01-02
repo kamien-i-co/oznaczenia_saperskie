@@ -23,6 +23,8 @@
             
         </l-popup>
       </l-marker>
+      <l-marker v-bind:key="'gps'"  v-if="gps"  :lat-lng="gps" :icon=icons.gps > 
+      </l-marker>
     </l-map>
      <vue-modaltor :visible="open" @hide="hideModal">
        <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2>
@@ -52,8 +54,9 @@ export default {
   data() {
     return {
       zoom: 14.5,
-      center: latLng(52.20985, 21.00843),
+      center: latLng(52.2169, 21.0210),
       content,
+      gps: null,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -92,7 +95,14 @@ export default {
         iconRetinaUrl: require('../../assets/icon-destroyed.svg'),
         iconSize: new L.Point(50, 60),
         className: 'leaflet-div-icon'
-    })
+    }),
+    gps: new L.Icon({
+        iconUrl: require('../../assets/gps.svg'),
+        iconRetinaUrl: require('../../assets/gps.svg'),
+        iconSize: new L.Point(50, 60),
+        className: 'leaflet-div-icon'
+    }),
+    
       }
     };
   },
@@ -115,6 +125,15 @@ export default {
     if (localStorage.closed) {
       this.open = false;
     }
+    const options = {
+      enableHighAccuracy: true, //defaults to false
+      timeout: 1000,
+    }
+    this.$watchLocation(options)
+    .then(coordinates => {
+      console.log(coordinates);
+      this.gps = latLng(coordinates.lat, coordinates.lng);
+    })
   },
 };
 </script>
