@@ -28,11 +28,15 @@
       </l-marker>
     </l-map>
      <vue-modaltor :visible="open" @hide="hideModal">
-       <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2>
-  <p class="m-5">
-    {{content.popupP1}}
-  </p>
-</vue-modaltor>
+       <!-- <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2> -->
+          
+          <div class="d-flex flex-row justify-content-center">
+            <img class="logo" src="../../assets/logo-full.svg">
+          </div>
+      <p class="m-5">
+        {{content.popupP1}}
+      </p>
+    </vue-modaltor>
 <!-- <button @click="open=true">modal-basic</button> -->
   </div>
 
@@ -126,9 +130,9 @@ export default {
     }
   },
   mounted() {
-    if (localStorage.closed) {
-      this.open = false;
-    }
+    // if (localStorage.closed) {
+    //   this.open = false;
+    // }
     const options = {
       enableHighAccuracy: true, //defaults to false
       timeout: 1000,
@@ -169,6 +173,10 @@ export default {
     width: 80% !important;
   }
   
+}
+
+.logo {
+  width: 50%;
 }
 
 .vue2leaflet-map {
