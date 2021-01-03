@@ -83,7 +83,8 @@ export const markers = [
     state: 'destroyed'
     },
     {
-        name: 'Wilcza 22, zniszczony przez inwestora odnawiajacego kamienicę, istnieje tam symboliczna i wtórna pleksi informujaca ze napis byl',
+        name: 'Wilcza 22',
+        description:  'Zniszczony przez inwestora odnawiajacego kamienicę, istnieje tam symboliczna i wtórna pleksi informujaca ze napis byl',
         latLng: latLng(52.225661531590404, 21.018212540763134),
         state: 'destroyed'
     },

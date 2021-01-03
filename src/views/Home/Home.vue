@@ -18,8 +18,9 @@
       />
       <l-marker v-bind:key="marker.name" v-for="marker in markers" :lat-lng="marker.latLng" :icon=icons[marker.state] >
         <l-popup>
-            <p>Adres: {{marker.name}}</p>
+            <p>Adres: <a :href="`https://www.google.com/maps/search/?api=1&query=${marker.latLng.lat},${marker.latLng.lng}`" target="_blank">{{marker.name}}</a></p>
             <p>Stan: <strong>{{state[marker.state]}}</strong> </p>
+            <p v-if="marker.description">{{marker.description}}</p>
             
         </l-popup>
       </l-marker>
@@ -43,6 +44,9 @@ import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
 import { markers, state, content} from './data';
 import L from 'leaflet';
 
+// system link do appleMaps / gMaps
+// center on geolocation
+
 export default {
   name: "Home",
   components: {
@@ -53,7 +57,6 @@ export default {
   },
   data() {
     return {
-      zoom: 14.5,
       center: latLng(52.2169, 21.0210),
       content,
       gps: null,
@@ -103,7 +106,8 @@ export default {
         className: 'leaflet-div-icon'
     }),
     
-      }
+      },
+      zoom: 14.5,
     };
   },
   methods: {
