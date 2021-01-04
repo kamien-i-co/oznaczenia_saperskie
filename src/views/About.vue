@@ -7,12 +7,12 @@
       <b-row>
         <b-col></b-col>
         <b-col md="12">
-          <p>{{text.p1}}</p>
-          <p>{{text.p2}}</p>
-          <p>{{text.p3}}</p>
-          <p>{{text.p4}}</p>
-          <p>{{text.p5}}</p>
-          <p>{{text.p6}}</p>
+          <p class="project-description">{{text.p1}}</p>
+          <p class="project-description">{{text.p2}}</p>
+          <p class="project-description">{{text.p3}}</p>
+          <p class="project-description">{{text.p4}}</p>
+          <p class="project-description">{{text.p5}}</p>
+          <p class="project-description">{{text.p6}}</p>
         </b-col>
         <b-col>
         </b-col>
@@ -64,7 +64,7 @@ export default {
   
 }
 
-p {
+.project-description {
   color: #fff;
 }
 
