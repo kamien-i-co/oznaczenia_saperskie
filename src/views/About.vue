@@ -3,9 +3,40 @@
     <div class="d-flex flex-row justify-content-center">
       <img class="logo" src="../assets/logo-full-white.svg">
     </div>
-    <p> To wazny kawalek historii... </p>
+    <b-container class="px-sm-5" fluid="lg">
+      <b-row>
+        <b-col></b-col>
+        <b-col md="12">
+          <p>{{text.p1}}</p>
+          <p>{{text.p2}}</p>
+          <p>{{text.p3}}</p>
+          <p>{{text.p4}}</p>
+          <p>{{text.p5}}</p>
+          <p>{{text.p6}}</p>
+        </b-col>
+        <b-col>
+        </b-col>
+      </b-row>
+    </b-container>
+    
   </div>
 </template>
+
+<script>
+import {text} from './about.content';
+
+// system link do appleMaps / gMaps
+// center on geolocation
+
+export default {
+  name: "About",
+  data() {
+    return {
+      text,
+    }
+  }
+}
+</script>
 
 <style>
 
@@ -31,6 +62,10 @@
     width: 25%;
   }
   
+}
+
+p {
+  color: #fff;
 }
 
 </style>

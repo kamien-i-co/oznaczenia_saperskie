@@ -2,7 +2,7 @@ import { latLng } from 'leaflet';
 
 export const content = {
     popupTitle: `Witaj na Mapie Oznaczeń Saperskich`,
-    popupP1: `Przygotowaliśmy ten projekt z myślą o ułatwieniu znalezienia oznaczeń w Warszawie. Projekt ten ma na celu...`
+    popupP1: `Celem stworzonej przez nas mapy jest ułatwienie dotarcia do pamiątek z 1945 roku, pozostawionych przez specjalne oddziały saperskie rozminowujące Warszawę.`
 }
 
 export const state = {
@@ -53,7 +53,7 @@ export const markers = [
       state: 'veryGood',
     },
     {//
-      name: 'Piekna 1b',
+      name: 'Piękna 1b',
       latLng: latLng(52.223686970518074, 21.02291513951925),
       state: 'unknown',
     },
@@ -78,9 +78,9 @@ export const markers = [
     state: 'destroyed'
     },
     {
-    name: 'Piękna 3',
-    latLng: latLng(52.22372092111382, 21.022374427057937),
-    state: 'destroyed'
+      name: 'Głogowa 27',
+      latLng: latLng(52.19187, 21.00013),
+      state: 'destroyed'
     },
     {
         name: 'Wilcza 22',
