@@ -31,7 +31,7 @@
        <!-- <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2> -->
           
           <div class="d-flex flex-row justify-content-center">
-            <img class="logo" src="../../assets/logo-full.svg">
+            <img class="logo--modal" src="../../assets/logo-full.svg">
           </div>
       <p class="m-5">
         {{content.popupP1}}
@@ -175,7 +175,7 @@ export default {
   
 }
 
-.logo {
+.logo--modal {
   width: 50%;
 }
 
