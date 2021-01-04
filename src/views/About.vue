@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="d-flex flex-row justify-content-center">
+    <div class="d-flex flex-row justify-content-center mb-3">
       <img class="logo" src="../assets/logo-full-white.svg">
     </div>
     <b-container class="px-sm-5" fluid="lg">
