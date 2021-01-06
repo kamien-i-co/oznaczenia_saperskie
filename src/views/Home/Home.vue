@@ -37,6 +37,10 @@
         {{content.popupP1}}
       </p>
     </vue-modaltor>
+<div class="geobtn-container">
+  <geolocation />
+</div>
+
 <!-- <button @click="open=true">modal-basic</button> -->
   </div>
 
@@ -47,6 +51,7 @@ import { latLng } from "leaflet";
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
 import { markers, state, content} from './data';
 import L from 'leaflet';
+import Geolocation from '../../components/GeolocatioBtn';
 
 // system link do appleMaps / gMaps
 // center on geolocation
@@ -57,7 +62,8 @@ export default {
     LMap,
     LTileLayer,
     LMarker,
-    LPopup
+    LPopup,
+    Geolocation
   },
   data() {
     return {
@@ -181,6 +187,13 @@ export default {
 
 .vue2leaflet-map {
   height: 100% !important;
+}
+
+.geobtn-container {
+  position: absolute;
+  z-index: 10001;
+  bottom: 10px;
+  right: 10px;
 }
 
 
