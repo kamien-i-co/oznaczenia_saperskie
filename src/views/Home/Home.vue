@@ -38,7 +38,7 @@
       </p>
     </vue-modaltor>
 <div class="geobtn-container">
-  <geolocation />
+  <geolocation @click.native="geolocate()" />
 </div>
 
 <!-- <button @click="open=true">modal-basic</button> -->
@@ -133,6 +133,10 @@ export default {
     hideModal() {
       this.open = false;
       localStorage.closed = true;
+    },
+    geolocate() {
+      console.log(this.center, this.gps);
+      this.center = this.gps;
     }
   },
   mounted() {
@@ -147,7 +151,7 @@ export default {
     .then(coordinates => {
       console.log(coordinates);
       this.gps = latLng(coordinates.lat, coordinates.lng);
-    })
+    });
   },
 };
 </script>
