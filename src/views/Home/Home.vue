@@ -136,7 +136,6 @@ export default {
       localStorage.closed = true;
     },
     geolocate() {
-      console.log(this.center, this.gps, this.$refs.map.center);
       const { lat, lng } = this.gps;
       this.$refs.map.mapObject.flyTo([lat, lng ])
     },
