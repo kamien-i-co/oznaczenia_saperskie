@@ -4,6 +4,7 @@
     <div style="height: 200px overflow: auto;">
     </div>
     <l-map
+      ref="map"
       v-if="showMap"
       :zoom="zoom"
       :center="center"
@@ -135,24 +136,31 @@ export default {
       localStorage.closed = true;
     },
     geolocate() {
-      console.log(this.center, this.gps);
-      this.center = this.gps;
-    }
+      console.log(this.center, this.gps, this.$refs.map.center);
+      const { lat, lng } = this.gps;
+      this.$refs.map.mapObject.flyTo([lat, lng ])
+    },
+    trackPosition() {
+      if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(this.successPosition, this.failurePosition, {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0,
+        })
+      } else {
+        alert(`Browser doesn't support Geolocation`)
+      }
+    },
+    successPosition: function(position) {
+      this.gps = latLng(position.coords.latitude, position.coords.longitude);
+    },
+    failurePosition: function(err) {
+      alert('Error Code: ' + err.code + ' Error Message: ' + err.message)
+    },
   },
   mounted() {
-    // if (localStorage.closed) {
-    //   this.open = false;
-    // }
-    const options = {
-      enableHighAccuracy: true, //defaults to false
-      timeout: 1000,
-    }
-    this.$watchLocation(options)
-    .then(coordinates => {
-      console.log(coordinates);
-      this.gps = latLng(coordinates.lat, coordinates.lng);
-    });
-  },
+    this.trackPosition()
+  }
 };
 </script>
 
