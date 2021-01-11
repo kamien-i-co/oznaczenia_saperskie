@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg x="0pt" y="0pt" width="300pt" height="300pt" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="1">
+    <title>Layer 1</title>
+    <defs>
+      <title>Path</title>
+      <g id="2">
+        <defs>
+          <path id="3" d="M150,-1.5085e-06 C232.843,-1.5085e-06,300,67.1573,300,150 C300,232.843,232.843,300,150,300 C67.1573,300,-4.06129e-06,232.843,-4.06129e-06,150 C-4.06129e-06,67.1573,67.1573,-1.5085e-06,150,-1.5085e-06 z"/>
+        </defs>
+        <use xlink:href="#3" style="fill:#4385f4;fill-opacity:0.350665;fill-rule:evenodd;opacity:1;stroke:none;"/>
+      </g>
+    </defs>
+    <use xlink:href="#2"/>
+    <defs>
+      <title>Path</title>
+      <g id="4">
+        <defs>
+          <path id="5" d="M150,70 C194.183,70,230,105.817,230,150 C230,194.183,194.183,230,150,230 C105.817,230,70,194.183,70,150 C70,105.817,105.817,70,150,70 z"/>
+        </defs>
+        <use xlink:href="#5" style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+      </g>
+    </defs>
+    <use xlink:href="#4"/>
+    <defs>
+      <title>Path</title>
+      <g id="6">
+        <defs>
+          <path id="7" d="M150,75 C191.421,75,225,108.579,225,150 C225,191.421,191.421,225,150,225 C108.579,225,75,191.421,75,150 C75,108.579,108.579,75,150,75 z"/>
+        </defs>
+        <use xlink:href="#7" style="fill:#4385f4;fill-opacity:1;fill-rule:evenodd;opacity:1;stroke:none;"/>
+      </g>
+    </defs>
+    <use xlink:href="#6"/>
+  </g>
+</svg>

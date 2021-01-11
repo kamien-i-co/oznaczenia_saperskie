@@ -111,9 +111,9 @@ export default {
         className: 'leaflet-div-icon'
     }),
     gps: new L.Icon({
-        iconUrl: require('../../assets/gps.svg'),
-        iconRetinaUrl: require('../../assets/gps.svg'),
-        iconSize: new L.Point(50, 60),
+        iconUrl: require('../../assets/gps-marker.svg'),
+        iconRetinaUrl: require('../../assets/gps-marker.svg'),
+        iconSize: new L.Point(30, 40),
         className: 'leaflet-div-icon'
     }),
     
