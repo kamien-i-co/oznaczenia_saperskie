@@ -6,12 +6,16 @@
     <b-container class="px-sm-5" fluid="lg">
       <b-row>
         <b-col></b-col>
-        <b-col md="12">
+        <b-col md="8">
           <p class="project-description">{{text.p1}}</p>
-          <img class="img-desc my-2" src="../assets/glogowa27.jpg">
+          <img class="img-desc mb-2" src="../assets/glogowa27.jpg">
           <p class="project-description">{{text.p2}}</p>
+
+          <img class="img-desc mb-2" src="../assets/Saperzy_1945.jpg">
           <p class="project-description">{{text.p3}}</p>
+          
           <p class="project-description">{{text.p4}}</p>
+          
           <p class="project-description">{{text.p5}}</p>
           <p class="project-description">{{text.p6}}</p>
         </b-col>
