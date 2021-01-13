@@ -19,7 +19,7 @@
       />
       <l-marker v-bind:key="marker.name" v-for="marker in markers" :lat-lng="marker.latLng" :icon=icons[marker.state] >
         <l-popup>
-            <p>Adres: <a :href="`https://www.google.com/maps/search/?api=1&query=${marker.latLng.lat},${marker.latLng.lng}`" target="_blank">{{marker.name}}</a></p>
+            <p>Adres: <a :href="`${isIOS ? 'maps' : 'https'}://www.google.com/maps/search/?api=1&query=${marker.latLng.lat},${marker.latLng.lng}`" target="_blank">{{marker.name}}</a></p>
             <p>Stan: <strong>{{state[marker.state]}}</strong> </p>
             <p v-if="marker.description">{{marker.description}}</p>
             
@@ -28,13 +28,13 @@
       <l-marker v-bind:key="'gps'"  v-if="gps"  :lat-lng="gps" :icon=icons.gps > 
       </l-marker>
     </l-map>
-     <vue-modaltor :visible="open" @hide="hideModal">
-       <!-- <h2 class="mx-5 mt-3">{{content.popupTitle}}</h2> -->
+     <vue-modaltor :visible="open" @hide="hideModal" animationParent="none">
           
           <div class="d-flex flex-row justify-content-center">
             <img class="logo--modal" src="../../assets/logo-full.svg">
           </div>
-      <p class="m-5">
+      <p class="mx-5 mt-5">{{content.popupTitle}}</p>    
+      <p class="mx-5">
         {{content.popupP1}}
       </p>
     </vue-modaltor>
@@ -159,6 +159,16 @@ export default {
   },
   mounted() {
     this.trackPosition()
+  },
+  computed: {
+    isIOS: () => {
+      if( (navigator.platform.indexOf("iPhone") !== -1) 
+        || (navigator.platform.indexOf("iPod") !== -1)
+        || (navigator.platform.indexOf("iPad") !== -1)) {
+          return true;
+        }
+      return;
+    }
   }
 };
 </script>
@@ -194,6 +204,7 @@ export default {
 
 .logo--modal {
   width: 50%;
+  height: 100% !important;
 }
 
 .vue2leaflet-map {
