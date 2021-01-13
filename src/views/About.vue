@@ -8,6 +8,7 @@
         <b-col></b-col>
         <b-col md="12">
           <p class="project-description">{{text.p1}}</p>
+          <img class="img-desc my-2" src="../assets/glogowa27.jpg">
           <p class="project-description">{{text.p2}}</p>
           <p class="project-description">{{text.p3}}</p>
           <p class="project-description">{{text.p4}}</p>
@@ -66,6 +67,10 @@ export default {
 
 .project-description {
   color: #fff;
+}
+
+.img-desc {
+  width: 100%;
 }
 
 </style>

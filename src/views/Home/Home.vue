@@ -146,8 +146,6 @@ export default {
           timeout: 5000,
           maximumAge: 0,
         })
-      } else {
-        alert(`Browser doesn't support Geolocation`)
       }
     },
     successPosition: function(position) {
