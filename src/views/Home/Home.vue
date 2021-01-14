@@ -214,7 +214,7 @@ export default {
 
 .geobtn-container {
   position: absolute;
-  z-index: 10001;
+  z-index: 9999;
   bottom: 10px;
   right: 10px;
 }
