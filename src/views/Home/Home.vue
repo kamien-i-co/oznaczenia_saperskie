@@ -156,7 +156,10 @@ export default {
     },
   },
   mounted() {
-    this.trackPosition()
+    if (localStorage.closed) {
+      this.open = false;
+    }
+    this.trackPosition();
   },
   computed: {
     isIOS: () => {
