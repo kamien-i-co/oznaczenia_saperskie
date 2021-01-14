@@ -152,7 +152,7 @@ export default {
       this.gps = latLng(position.coords.latitude, position.coords.longitude);
     },
     failurePosition: function(err) {
-      alert('Error Code: ' + err.code + ' Error Message: ' + err.message)
+      console.log('Error Code: ' + err.code + ' Error Message: ' + err.message)
     },
   },
   mounted() {
