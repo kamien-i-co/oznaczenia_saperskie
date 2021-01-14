@@ -16,8 +16,19 @@
           
           <p class="project-description">{{text.p4}}</p>
           
+          <img class="img-desc mb-2" src="../assets/wawelska60.jpg">
+
           <p class="project-description">{{text.p5}}</p>
           <p class="project-description">{{text.p6}}</p>
+          <br />
+          <p class="project-description mt-5  text-left">{{text.p7}}</p>
+          <p class="project-description  text-left">
+            <a href="https://github.com/kamien-i-co/oznaczenia_saperskie" target="_blank">Github</a> (ale nie polecamy wglądu w kod, bo jest bzidki :( )
+          </p>
+          <p class="project-description text-left">
+            <a href="https://github.com/kamien-i-co/oznaczenia_saperskie/blob/main/src/views/Home/data.js" target="_blank">Dataset</a>
+          </p>
+
         </b-col>
         <b-col>
         </b-col>
