@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Mapa</router-link> |
       <router-link to="/about">O projekcie</router-link> |
+      <router-link to="/legend">Legenda</router-link> |
       <a href="https://www.facebook.com/kamienicowarszawa" target="_blank">Kamień i Co?</a>
     </div>
     <router-view/>
