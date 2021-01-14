@@ -6,19 +6,19 @@
         <b-col md="4" class="text-left">
           <p class="project-description">Oznaczenie saperskie: </p>
           <p class="project-description">
-          <img class="img-desc mb-2" src="../assets/icon-destroyed.svg">
+          <img class="marker-desc mb-2" src="../assets/icon-destroyed.svg">
            - zniszczone
           </p>
           <p class="project-description">
-          <img class="img-desc mb-2" src="../assets/icon-veryGood.svg">
+          <img class="marker-desc mb-2" src="../assets/icon-veryGood.svg">
            - zabezpieczone
           </p>
           <p class="project-description">
-          <img class="img-desc mb-2" src="../assets/icon-unknown.svg">
+          <img class="marker-desc mb-2" src="../assets/icon-unknown.svg">
            - niezabezpieczone
           </p>
           <p class="project-description">
-          <img class="img-desc mb-2" src="../assets/icon-veryBad.svg">
+          <img class="marker-desc mb-2" src="../assets/icon-veryBad.svg">
            - w bardzo złym stanie
           </p>
 
@@ -40,7 +40,7 @@
   color: #fff;
 }
 
-.img-desc {
+.marker-desc {
   max-width: 60px;
 }
 

@@ -23,7 +23,7 @@
           <br />
           <p class="project-description mt-5  text-left">{{text.p7}}</p>
           <p class="project-description  text-left">
-            <a href="https://github.com/kamien-i-co/oznaczenia_saperskie" target="_blank">Github</a> (ale nie polecamy wglądu w kod, bo jest bzidki :( )
+            <a href="https://github.com/kamien-i-co/oznaczenia_saperskie" target="_blank">Github</a>
           </p>
           <p class="project-description text-left">
             <a href="https://github.com/kamien-i-co/oznaczenia_saperskie/blob/main/src/views/Home/data.js" target="_blank">Dataset</a>
