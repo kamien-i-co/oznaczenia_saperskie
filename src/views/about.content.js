@@ -18,5 +18,5 @@ export const text = {
     p7: `Projekt zrealizowany w 100% non-profit i po godzinach pracy. W trakcie pisania kodu zużyto +-250g ziaren kawy, 80g tytoniu i około 50 karteczek samoprzylepnych.`,
     zdj0: `Zdj. 1 Głogowa 27 autor Paweł Kozdrowicz, 2009 rok`,
     zdj1: `Zdj. 2 Wycinek z "Życie Warszawy", 1945 rok`,
-    zdj2: `Zdj. 3 Wawelska 60, Stowarzyszenie Kamien i co? 2020 rok`
+    zdj2: `Zdj. 3 Wawelska 60, Stowarzyszenie "Kamień i co?" 2020 rok`
 }
