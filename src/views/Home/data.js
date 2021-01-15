@@ -2,9 +2,9 @@ import { latLng } from 'leaflet';
 
 export const content = {
     popupTitle: `Cześć,`,
-    popupP1: `zapraszamy Cie do poznania Mapy Oznaczeń Saperskich.
-    Dzięki niej dotrzesz specjalnych napisów, które oddziały saperskie rozminowujące Warszawę pozostawiły w 1945 roku.
-    Liczymy na to, że dzięki niej lepiej poznaasz swoją okolicę, bądź też wybierzesz się na wycieczkę po mieście (oczywiście z zachowaniem reżimu sanitarnego ;) )`
+    popupP1: `zapraszamy Cię do poznania Mapy Oznaczeń Saperskich.
+    Dzięki niej dotrzesz do specjalnych napisów, które oddziały saperskie rozminowujące Warszawę pozostawiły w 1945 roku.
+    Liczymy na to, że dzięki niej lepiej poznasz swoją okolicę, bądź też wybierzesz się na wycieczkę po mieście (oczywiście z zachowaniem reżimu sanitarnego ;) )`
 }
 
 export const state = {

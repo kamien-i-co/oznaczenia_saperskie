@@ -68,6 +68,7 @@ export default {
   
   .logo {
     width: 75%;
+    height: 100%;
   }
   
 }
@@ -75,6 +76,7 @@ export default {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   .logo {
     width: 50%;
+    height: 100%;
   }
 }
 
@@ -82,6 +84,7 @@ export default {
   
   .logo {
     width: 25%;
+    height: 100%;
   }
   
 }
