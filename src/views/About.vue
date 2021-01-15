@@ -20,8 +20,14 @@
 
           <p class="project-description">{{text.p5}}</p>
           <p class="project-description">{{text.p6}}</p>
+
           <br />
+          <p class="project-description  text-left"><small>{{text.zdj0}}</small></p>
+          <p class="project-description  text-left"><small>{{text.zdj1}}</small></p>
+          <p class="project-description  text-left"><small>{{text.zdj2}}</small></p>
+          
           <p class="project-description mt-5  text-left">{{text.p7}}</p>
+          
           <p class="project-description  text-left">
             <a href="https://github.com/kamien-i-co/oznaczenia_saperskie" target="_blank">Github</a>
           </p>
