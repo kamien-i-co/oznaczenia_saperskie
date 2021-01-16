@@ -141,7 +141,7 @@ export default {
     },
     getLink({lat, lng}) {
       if(this.isIOS) {
-        return `maps.apple.com/maps?q=${lat},${lng}`
+        return `https://maps.apple.com/maps?q=${lat},${lng}`
       }
       return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
     },
@@ -165,6 +165,7 @@ export default {
     if (localStorage.closed) {
       this.open = false;
     }
+    alert('aaa!!'); 
     this.trackPosition();
   },
   computed: {
