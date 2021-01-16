@@ -19,7 +19,7 @@
       />
       <l-marker v-bind:key="marker.name" v-for="marker in markers" :lat-lng="marker.latLng" :icon=icons[marker.state] >
         <l-popup>
-            <p>Adres: <a :href="`${isIOS ? 'maps' : 'https'}://www.google.com/maps/search/?api=1&query=${marker.latLng.lat},${marker.latLng.lng}`" target="_blank">{{marker.name}}</a></p>
+            <p>Adres: <a :href="getLink(marker.latLng)" target="_blank">{{marker.name}}</a></p>
             <p>Stan: <strong>{{state[marker.state]}}</strong> </p>
             <p v-if="marker.description">{{marker.description}}</p>
             
@@ -138,6 +138,12 @@ export default {
     geolocate() {
       const { lat, lng } = this.gps;
       this.$refs.map.mapObject.flyTo([lat, lng ])
+    },
+    getLink({lat, lng}) {
+      if(this.isIOS) {
+        return `maps.apple.com/maps?q=${lat},${lng}`
+      }
+      return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
     },
     trackPosition() {
       if (navigator.geolocation) {
