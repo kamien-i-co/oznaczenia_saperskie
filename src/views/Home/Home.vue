@@ -165,7 +165,6 @@ export default {
     if (localStorage.closed) {
       this.open = false;
     }
-    alert('aaa!!'); 
     this.trackPosition();
   },
   computed: {
